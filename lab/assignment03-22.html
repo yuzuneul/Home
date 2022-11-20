@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var a = prompt("파스칼 삼각형의 높이를 입력하시오")
+    a = parseInt(a)
+
+    var main = ""
+    for (var b = 0; b < a; b++) {
+        var getRow = function new_row(prev_row) {
+            var result = new Array(prev_row + 1);
+            var j = 0;
+            for (i = prev_row; i >= 0; i--) {
+                result[i] = 1;
+                for (j = i + 1; j < prev_row; j++) {
+                    result[j] += result[j + 1];
+                }
+            }
+            return result;
+        };
+        main = main + "<br>"
+
+        var row = getRow(b);
+        for(var k=0; k<row.length; k++) {
+            main += row[k] + " ";
+        }
+    }
+    document.write("(prompt 윈도우에서의 메시지와 입력 값 : 파스칼의 삼각형의 높이 : " + a + ")" + "<br>" + main)
+</script>
+<body>
+
+</body>
+</html>
