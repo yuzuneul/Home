@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+  var m = prompt("enter  number:");
+
+
+    var arrMain = new Array();
+    for (var i = 0; i < m; i++) {
+        arrMain[i] = [];
+    }
+    for (var i = 0; i < m; i++) {
+        if (i == 0) {
+            arrMain[i] = [1];
+        } else if (i == 1) {
+            (arrMain[i]) = [1, 1];
+        } else {
+            for (var j = 0; j <= i; j++) {
+                if (j == 0 || j == arrMain[i - 1].length) {
+                    arrMain[i][j] = 1;
+                } else {
+                    arrMain[i][j] = arrMain[i - 1][j] + arrMain[i - 1][j - 1];
+                }
+            }
+        }
+        document.write(arrMain[i] + "<br>");
+    }
+</script>
+<body>
+
+</body>
+</html>

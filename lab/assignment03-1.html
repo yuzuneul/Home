@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2진수를 16진수로 변환하기</title>
+</head>
+<script>
+    function binaryToHexa(){
+    var inputNum = prompt("2진수를 입력하시오")
+    var removeSpace = inputNum.split(" ")
+    var num = removeSpace.join("")
+    var splitNum = num.split("")
+    var hexa = []
+    var result = []
+    //4자리 씩 끊어서 switch문으로 16진수 값 반환
+    while(splitNum.length>0){
+        for(i=0;i<4;i++){
+            if(splitNum.length==0){
+                hexa.unshift("0")
+            }else{
+                hexa.unshift(splitNum.pop())
+            }
+        }
+        switch (hexa.join("")) {
+            case "0000":
+                result.unshift(0)
+                break;
+            case "0001":
+                result.unshift(1)
+                break;
+            case "0010":
+                result.unshift(2)
+                break;
+            case "0011":
+                result.unshift(3)
+                break;
+            case "0100":
+                result.unshift(4)
+                break;
+            case "0101":
+                result.unshift(5)
+                break;
+            case "0110":
+                result.unshift(6)
+                break;
+            case "0111":
+                result.unshift(7)
+                break;
+            case "1000":
+                result.unshift(8)
+                break;
+            case "1001":
+                result.unshift(9)
+                break;
+            case "1010":
+                result.unshift("a")
+                break;
+            case "1011":
+                result.unshift("b")
+                break;
+            case "1100":
+                result.unshift("c")
+                break;
+            case "1101":
+                result.unshift("d")
+                break;
+            case "1110":
+                result.unshift("e")
+                break;
+            case "1111":
+                result.unshift("f")
+                break;
+        }
+        hexa = []
+    }
+    return result.join("")
+
+}
+
+document.write(binaryToHexa())
+</script>
+<body>
+
+</body>
+</html>

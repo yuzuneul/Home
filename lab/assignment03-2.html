@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+
+    function new_row(prev_row) {
+        var prev_row = prompt("파스칼 삼각형의 높이를 입력하시오")
+        prev_row = parseInt(prev_row)
+        var pascalTriangle = [];
+
+        for (var i = 0; i < prev_row; i++) {
+            pascalTriangle[i] = new Array(i + 1);
+
+            for (var j = 0; j < i + 1; j++) {
+                if (j === 0 || j === i) {
+                    pascalTriangle[i][j] = 1;
+                } else {
+                    pascalTriangle[i][j] = pascalTriangle[i - 1][j - 1] + pascalTriangle[i - 1][j];
+                }
+            }
+        }
+        return pascalTriangle;
+
+    }
+document.write(new_row());
+</script>
+<body>
+
+</body>
+</html>
