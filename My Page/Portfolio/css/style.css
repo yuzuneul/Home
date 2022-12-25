@@ -1894,7 +1894,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
 }
 
 .owl-gallery-big {
-  height: 100vh;
+  height: 70vh;
   min-height: 470px;
   position: relative;
 }
