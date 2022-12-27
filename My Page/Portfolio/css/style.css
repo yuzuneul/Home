@@ -467,16 +467,19 @@ a, a:hover {
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top {
   float: left;
-  width: 55%;
-  margin-top: -10%;
-  margin-right: -100%;
+  width: 120%;
+  margin-top: -15%;
+  margin-right: -40%;
   position: relative;
   z-index: 1;
 }
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-bottom {
   float: right;
-  width: 75%;
+  width: 120%;
+  margin-top: -15%;
+  margin-right: -80%;
+  position: relative;
 }
 
 .suite-wrap.overlap-image-1 .suite-contents {
