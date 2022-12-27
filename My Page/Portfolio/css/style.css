@@ -467,19 +467,16 @@ a, a:hover {
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-top {
   float: left;
-  width: 120%;
-  margin-top: -15%;
-  margin-right: -40%;
+  width: 55%;
+  margin-top: -10%;
+  margin-right: -100%;
   position: relative;
   z-index: 1;
 }
 
 .suite-wrap.overlap-image-1 .suite .image-stack .image-stack-item.image-stack-item-bottom {
   float: right;
-  width: 120%;
-  margin-top: -15%;
-  margin-right: -80%;
-  position: relative;
+  width: 75%;
 }
 
 .suite-wrap.overlap-image-1 .suite-contents {
@@ -1897,7 +1894,7 @@ footer .form-subscribe .form-control:active, footer .form-subscribe .form-contro
 }
 
 .owl-gallery-big {
-  height: 70vh;
+  height: 100vh;
   min-height: 470px;
   position: relative;
 }
